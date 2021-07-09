@@ -71,5 +71,15 @@
             android:textAlignment="center"
             android:textSize="16sp" />
 
+        <Button
+            android:id="@+id/switchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00838F"
+            android:minHeight="60dp"
+            android:text="Заполнить форму"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
