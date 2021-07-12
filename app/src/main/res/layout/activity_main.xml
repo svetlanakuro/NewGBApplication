@@ -1,75 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="@string/_result" />
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textAlignment="textStart" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="serif"
-            android:hint="@android:string/unknownName"
-            android:inputType="textPersonName"
-            android:text="@android:string/unknownName"
-            android:textAlignment="center"
-            android:textColor="#4527A0"
-            android:typeface="serif" />
-
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="monospace"
-            android:text="Использовать различные атрибуты"
-            android:textSize="12sp"
-            android:typeface="normal" />
-
-        <ToggleButton
-            android:id="@+id/toggleButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:checked="true" />
-
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Switch" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
+            android:id="@+id/all_clean"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="#00838F"
-            android:minHeight="60dp"
-            android:text="@android:string/ok"
-            android:textAlignment="center"
-            android:textSize="16sp" />
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_all_clean"
+            android:textSize="@dimen/button_text" />
 
+        <Button
+            android:id="@+id/clean"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_clean"
+            android:textSize="@dimen/button_text" />
+
+        <Button
+            android:id="@+id/percentage"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_percentage"
+            android:textSize="@dimen/button_text" />
+
+        <Button
+            android:id="@+id/button_division"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_division"
+            android:textSize="@dimen/button_text" />
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_1"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_1"
+            android:textSize="@dimen/button_text" />
+
+        <Button
+            android:id="@+id/button_2"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_2"
+            android:textSize="@dimen/button_text" />
+
+        <Button
+            android:id="@+id/button_3"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_3"
+            android:textSize="@dimen/button_text" />
+
+        <Button
+            android:id="@+id/button_multiplication"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_multiplication"
+            android:textSize="@dimen/button_text" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_4"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_4"
+            android:textSize="@dimen/button_text" />
+
+        <Button
+            android:id="@+id/button_5"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_5"
+            android:textSize="@dimen/button_text" />
+
+        <Button
+            android:id="@+id/button_6"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_6"
+            android:textSize="@dimen/button_text" />
+
+        <Button
+            android:id="@+id/button_subtraction"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_subtraction"
+            android:textSize="@dimen/button_text" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_7"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_7"
+            android:textSize="@dimen/button_text" />
+
+        <Button
+            android:id="@+id/button_8"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_8"
+            android:textSize="@dimen/button_text" />
+
+        <Button
+            android:id="@+id/button_9"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_9"
+            android:textSize="@dimen/button_text" />
+
+        <Button
+            android:id="@+id/button_addition"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_addition"
+            android:textSize="@dimen/button_text" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_0"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_0"
+            android:textSize="@dimen/button_text" />
+
+        <Button
+            android:id="@+id/button_point"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_point"
+            android:textSize="@dimen/button_text" />
+
+        <Button
+            android:id="@+id/button_calculate"
+            style="@style/Theme.NewGBApplication"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="@string/_calculate"
+            android:textSize="@dimen/button_text" />
+    </LinearLayout>
+
+</LinearLayout>
