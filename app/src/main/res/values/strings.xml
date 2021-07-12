@@ -20,4 +20,5 @@
     <string name="_percentage">%</string>
     <string name="_addition">+</string>
     <string name="_result">result</string>
+    <string name="_operation">operation</string>
 </resources>
