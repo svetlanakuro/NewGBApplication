@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.mariuszgromada.math.mxparser.Expression;
@@ -13,7 +14,9 @@ import org.mariuszgromada.math.mxparser.Expression;
 public class MainActivity extends AppCompatActivity {
 
     private EditText input;
-    private TextView output;
+    private TextView resultPreview;
+    private UserText userText;
+    private final static String KeyUserText = "UserText";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +24,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         input = findViewById(R.id.inputView);
-        output = findViewById(R.id.outputView);
+        resultPreview = findViewById(R.id.outputView);
 
         input.setShowSoftInputOnFocus(false);
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle instanceState) {
+        super.onSaveInstanceState(instanceState);
+        userText = new UserText(input.getText().toString(), resultPreview.getText().toString());
+        instanceState.putParcelable(KeyUserText, userText);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
+        super.onRestoreInstanceState(instanceState);
+        userText = instanceState.getParcelable(KeyUserText);
+
+        input.setText(userText.getUserInput());
+        input.setSelection(input.getText().length());
+
+        resultPreview.setText(userText.getUserOutput());
     }
 
     private void updateText(String addStr) {
@@ -40,52 +61,52 @@ public class MainActivity extends AppCompatActivity {
 
     public void zeroButton(View view) {
         updateText(getResources().getString(R.string._0));
-        calculate();
+        resultPreview.setText(calculate(input.getText().toString()));
     }
 
     public void oneButton(View view) {
         updateText(getResources().getString(R.string._1));
-        calculate();
+        resultPreview.setText(calculate(input.getText().toString()));
     }
 
     public void twoButton(View view) {
         updateText(getResources().getString(R.string._2));
-        calculate();
+        resultPreview.setText(calculate(input.getText().toString()));
     }
 
     public void threeButton(View view) {
         updateText(getResources().getString(R.string._3));
-        calculate();
+        resultPreview.setText(calculate(input.getText().toString()));
     }
 
     public void fourButton(View view) {
         updateText(getResources().getString(R.string._4));
-        calculate();
+        resultPreview.setText(calculate(input.getText().toString()));
     }
 
     public void fiveButton(View view) {
         updateText(getResources().getString(R.string._5));
-        calculate();
+        resultPreview.setText(calculate(input.getText().toString()));
     }
 
     public void sixButton(View view) {
         updateText(getResources().getString(R.string._6));
-        calculate();
+        resultPreview.setText(calculate(input.getText().toString()));
     }
 
     public void sevenButton(View view) {
         updateText(getResources().getString(R.string._7));
-        calculate();
+        resultPreview.setText(calculate(input.getText().toString()));
     }
 
     public void eightButton(View view) {
         updateText(getResources().getString(R.string._8));
-        calculate();
+        resultPreview.setText(calculate(input.getText().toString()));
     }
 
     public void nineButton(View view) {
         updateText(getResources().getString(R.string._9));
-        calculate();
+        resultPreview.setText(calculate(input.getText().toString()));
     }
 
     public void pointButton(View view) {
@@ -121,31 +142,27 @@ public class MainActivity extends AppCompatActivity {
             selection.replace(cursorPosition - 1, cursorPosition, "");
             input.setText(selection);
             input.setSelection(cursorPosition - 1);
-
-            calculate();
         }
+        resultPreview.setText(calculate(input.getText().toString()));
     }
 
     public void allCleanButton(View view) {
         input.setText("");
-        output.setText("");
+        resultPreview.setText("");
     }
 
     public void calculateButton(View view) {
-        String userExpression = input.getText().toString();
-        Expression expression = new Expression(userExpression);
-        String result = String.valueOf(expression.calculate());
+        input.setText(calculate(input.getText().toString()));
+        input.setSelection(calculate(input.getText().toString()).length());
 
-        input.setText(result);
-        input.setSelection(result.length());
-        calculate();
+        resultPreview.setText("");
     }
 
-    public void calculate() {
-        String userExpression = input.getText().toString();
+    public String calculate(String str) {
+        String userExpression = str;
         Expression expression = new Expression(userExpression);
         String result = String.valueOf(expression.calculate());
 
-        output.setText(result);
+        return result;
     }
 }
