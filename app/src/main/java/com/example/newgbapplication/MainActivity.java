@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         input = findViewById(R.id.inputView);
-        resultPreview = findViewById(R.id.outputView);
+        resultPreview = findViewById(R.id.resultPreviewView);
 
         input.setShowSoftInputOnFocus(false);
     }
@@ -159,10 +159,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public String calculate(String str) {
-        String userExpression = str;
-        Expression expression = new Expression(userExpression);
+        Expression expression = new Expression(str);
         String result = String.valueOf(expression.calculate());
-
+        if (result.equals("NaN")) {
+            result = "Некорректное выражение";
+        }
         return result;
     }
 }

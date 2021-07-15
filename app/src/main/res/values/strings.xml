@@ -19,6 +19,5 @@
     <string name="clean">C</string>
     <string name="percentage">%</string>
     <string name="addition">+</string>
-    <string name="result">result</string>
-    <string name="input">input</string>
+    <string name="input">Введите выражение</string>
 </resources>
