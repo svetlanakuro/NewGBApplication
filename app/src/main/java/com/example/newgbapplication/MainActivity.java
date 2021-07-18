@@ -3,6 +3,7 @@ package com.example.newgbapplication;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -59,53 +60,9 @@ public class MainActivity extends AppCompatActivity {
         input.setSelection(cursorPosition + addStr.length());
     }
 
-    public void zeroButton(View view) {
-        updateText(getResources().getString(R.string._0));
-        resultPreview.setText(calculate(input.getText().toString()));
-    }
-
-    public void oneButton(View view) {
-        updateText(getResources().getString(R.string._1));
-        resultPreview.setText(calculate(input.getText().toString()));
-    }
-
-    public void twoButton(View view) {
-        updateText(getResources().getString(R.string._2));
-        resultPreview.setText(calculate(input.getText().toString()));
-    }
-
-    public void threeButton(View view) {
-        updateText(getResources().getString(R.string._3));
-        resultPreview.setText(calculate(input.getText().toString()));
-    }
-
-    public void fourButton(View view) {
-        updateText(getResources().getString(R.string._4));
-        resultPreview.setText(calculate(input.getText().toString()));
-    }
-
-    public void fiveButton(View view) {
-        updateText(getResources().getString(R.string._5));
-        resultPreview.setText(calculate(input.getText().toString()));
-    }
-
-    public void sixButton(View view) {
-        updateText(getResources().getString(R.string._6));
-        resultPreview.setText(calculate(input.getText().toString()));
-    }
-
-    public void sevenButton(View view) {
-        updateText(getResources().getString(R.string._7));
-        resultPreview.setText(calculate(input.getText().toString()));
-    }
-
-    public void eightButton(View view) {
-        updateText(getResources().getString(R.string._8));
-        resultPreview.setText(calculate(input.getText().toString()));
-    }
-
-    public void nineButton(View view) {
-        updateText(getResources().getString(R.string._9));
+    public void clickNumberButton(View view) {
+        Button btn = (Button) view;
+        updateText(btn.getText().toString());
         resultPreview.setText(calculate(input.getText().toString()));
     }
 
