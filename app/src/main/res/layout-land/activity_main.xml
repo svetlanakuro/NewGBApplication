@@ -7,7 +7,7 @@
 
     <EditText
         android:id="@+id/inputView"
-        android:layout_width="0dp"
+        android:layout_width="350dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
         android:layout_weight="2"
@@ -18,23 +18,23 @@
         android:textSize="@dimen/view_text"
         app:layout_constraintBottom_toTopOf="@+id/resultPreviewView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
 
     <TextView
         android:id="@+id/resultPreviewView"
-        android:layout_width="0dp"
+        android:layout_width="350dp"
         android:layout_height="100dp"
         android:layout_margin="10dp"
         android:layout_weight="1"
         android:text=""
         android:textAlignment="viewEnd"
         android:textSize="@dimen/view_text"
-        app:layout_constraintBottom_toTopOf="@+id/all_clean"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputView" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_0"
@@ -47,7 +47,7 @@
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_point"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/inputView" />
 
     <Button
         android:id="@+id/button_1"
@@ -60,7 +60,7 @@
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@+id/button_0"
         app:layout_constraintEnd_toStartOf="@+id/button_2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/inputView" />
 
     <Button
         android:id="@+id/button_2"
@@ -99,7 +99,7 @@
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@+id/button_1"
         app:layout_constraintEnd_toStartOf="@+id/button_5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/inputView" />
 
     <Button
         android:id="@+id/button_5"
@@ -139,7 +139,7 @@
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@+id/button_4"
         app:layout_constraintEnd_toStartOf="@+id/button_8"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/inputView" />
 
     <Button
         android:id="@+id/button_8"
@@ -269,12 +269,12 @@
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@+id/button_7"
         app:layout_constraintEnd_toStartOf="@+id/clean"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/inputView" />
 
     <Button
         android:id="@+id/button_calculate"
         style="@style/Theme.NewGBApplication"
-        android:layout_width="180dp"
+        android:layout_width="170dp"
         android:layout_height="55dp"
         android:layout_margin="5dp"
         android:onClick="calculateButton"
