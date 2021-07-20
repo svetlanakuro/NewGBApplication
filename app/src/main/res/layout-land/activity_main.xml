@@ -39,120 +39,80 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_0"
-        android:layout_width="80dp"
-        android:layout_height="55dp"
-        android:layout_margin="@dimen/button_margin"
-        android:onClick="clickNumberButton"
+        style="@style/Button.NewGBApplication"
         android:text="@string/_0"
-        android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_point"
         app:layout_constraintStart_toEndOf="@+id/inputView" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_1"
-        android:layout_width="80dp"
-        android:layout_height="55dp"
-        android:layout_margin="@dimen/button_margin"
-        android:onClick="clickNumberButton"
+        style="@style/Button.NewGBApplication"
         android:text="@string/_1"
-        android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@+id/button_0"
         app:layout_constraintEnd_toStartOf="@+id/button_2"
         app:layout_constraintStart_toEndOf="@+id/inputView" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_2"
-        android:layout_width="80dp"
-        android:layout_height="55dp"
-        android:layout_margin="@dimen/button_margin"
-        android:onClick="clickNumberButton"
+        style="@style/Button.NewGBApplication"
         android:text="@string/_2"
-        android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@+id/button_point"
         app:layout_constraintEnd_toStartOf="@+id/button_3"
         app:layout_constraintStart_toEndOf="@+id/button_1" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_3"
-        android:layout_width="80dp"
-        android:layout_height="55dp"
-        android:layout_margin="@dimen/button_margin"
-        android:onClick="clickNumberButton"
+        style="@style/Button.NewGBApplication"
         android:text="@string/_3"
-        android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@+id/button_calculate"
         app:layout_constraintEnd_toStartOf="@+id/button_addition"
         app:layout_constraintStart_toEndOf="@+id/button_2" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_4"
-        android:layout_width="80dp"
-        android:layout_height="55dp"
-        android:layout_margin="@dimen/button_margin"
-        android:onClick="clickNumberButton"
+        style="@style/Button.NewGBApplication"
         android:text="@string/_4"
-        android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@+id/button_1"
         app:layout_constraintEnd_toStartOf="@+id/button_5"
         app:layout_constraintStart_toEndOf="@+id/inputView" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_5"
-        android:layout_width="80dp"
-        android:layout_height="55dp"
-        android:layout_margin="@dimen/button_margin"
-        android:onClick="clickNumberButton"
+        style="@style/Button.NewGBApplication"
         android:text="@string/_5"
-        android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@+id/button_2"
         app:layout_constraintEnd_toStartOf="@+id/button_6"
         app:layout_constraintStart_toEndOf="@+id/button_4" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_6"
-        android:layout_width="80dp"
-        android:layout_height="55dp"
-        android:layout_margin="@dimen/button_margin"
-        android:onClick="clickNumberButton"
+        style="@style/Button.NewGBApplication"
         android:text="@string/_6"
-        android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@+id/button_3"
         app:layout_constraintEnd_toStartOf="@+id/button_subtraction"
         app:layout_constraintStart_toEndOf="@+id/button_5" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_7"
-        android:layout_width="80dp"
-        android:layout_height="55dp"
-        android:layout_margin="@dimen/button_margin"
-        android:onClick="clickNumberButton"
+        style="@style/Button.NewGBApplication"
         android:text="@string/_7"
-        android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@+id/button_4"
         app:layout_constraintEnd_toStartOf="@+id/button_8"
         app:layout_constraintStart_toEndOf="@+id/inputView" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_8"
-        android:layout_width="80dp"
-        android:layout_height="55dp"
-        android:layout_margin="@dimen/button_margin"
-        android:onClick="clickNumberButton"
+        style="@style/Button.NewGBApplication"
         android:text="@string/_8"
-        android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@+id/button_5"
         app:layout_constraintEnd_toStartOf="@+id/button_9"
         app:layout_constraintStart_toEndOf="@+id/button_7" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_9"
-        android:layout_width="80dp"
-        android:layout_height="55dp"
-        android:layout_margin="@dimen/button_margin"
-        android:onClick="clickNumberButton"
+        style="@style/Button.NewGBApplication"
         android:text="@string/_9"
-        android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@+id/button_6"
         app:layout_constraintEnd_toStartOf="@+id/button_multiplication"
         app:layout_constraintStart_toEndOf="@+id/button_8" />
