@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.NewGBApplication"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,7 +10,7 @@
         android:id="@+id/inputView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="10dp"
+        android:layout_margin="@dimen/view_margin"
         android:layout_weight="2"
         android:hint="@string/input"
         android:importantForAutofill="no"
@@ -26,7 +27,7 @@
         android:id="@+id/resultPreviewView"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_margin="10dp"
+        android:layout_margin="@dimen/view_margin"
         android:layout_weight="1"
         android:text=""
         android:textAlignment="viewEnd"
@@ -36,12 +37,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputView" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_0"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="clickNumberButton"
         android:text="@string/_0"
         android:textSize="@dimen/button_text"
@@ -49,12 +49,11 @@
         app:layout_constraintEnd_toStartOf="@+id/button_point"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_1"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="clickNumberButton"
         android:text="@string/_1"
         android:textSize="@dimen/button_text"
@@ -62,12 +61,11 @@
         app:layout_constraintEnd_toStartOf="@+id/button_2"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_2"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="clickNumberButton"
         android:text="@string/_2"
         android:textSize="@dimen/button_text"
@@ -75,12 +73,11 @@
         app:layout_constraintEnd_toStartOf="@+id/button_3"
         app:layout_constraintStart_toEndOf="@+id/button_1" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_3"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="clickNumberButton"
         android:text="@string/_3"
         android:textSize="@dimen/button_text"
@@ -88,12 +85,11 @@
         app:layout_constraintEnd_toStartOf="@+id/button_addition"
         app:layout_constraintStart_toEndOf="@+id/button_2" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_4"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="clickNumberButton"
         android:text="@string/_4"
         android:textSize="@dimen/button_text"
@@ -101,12 +97,11 @@
         app:layout_constraintEnd_toStartOf="@+id/button_5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_5"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="clickNumberButton"
         android:text="@string/_5"
         android:textSize="@dimen/button_text"
@@ -114,13 +109,11 @@
         app:layout_constraintEnd_toStartOf="@+id/button_6"
         app:layout_constraintStart_toEndOf="@+id/button_4" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_6"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
-        android:layout_marginBottom="4dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="clickNumberButton"
         android:text="@string/_6"
         android:textSize="@dimen/button_text"
@@ -128,12 +121,11 @@
         app:layout_constraintEnd_toStartOf="@+id/button_subtraction"
         app:layout_constraintStart_toEndOf="@+id/button_5" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_7"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="clickNumberButton"
         android:text="@string/_7"
         android:textSize="@dimen/button_text"
@@ -141,12 +133,11 @@
         app:layout_constraintEnd_toStartOf="@+id/button_8"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_8"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="clickNumberButton"
         android:text="@string/_8"
         android:textSize="@dimen/button_text"
@@ -154,12 +145,11 @@
         app:layout_constraintEnd_toStartOf="@+id/button_9"
         app:layout_constraintStart_toEndOf="@+id/button_7" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_9"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="clickNumberButton"
         android:text="@string/_9"
         android:textSize="@dimen/button_text"
@@ -167,12 +157,11 @@
         app:layout_constraintEnd_toStartOf="@+id/button_multiplication"
         app:layout_constraintStart_toEndOf="@+id/button_8" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_point"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="pointButton"
         android:text="@string/point"
         android:textSize="@dimen/button_text"
@@ -180,12 +169,11 @@
         app:layout_constraintEnd_toStartOf="@+id/button_calculate"
         app:layout_constraintStart_toEndOf="@+id/button_0" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_addition"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="additionButton"
         android:text="@string/addition"
         android:textSize="@dimen/button_text"
@@ -193,12 +181,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_3" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_subtraction"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="subtractionButton"
         android:text="@string/subtraction"
         android:textSize="@dimen/button_text"
@@ -206,12 +193,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_6" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_multiplication"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="multiplicationButton"
         android:text="@string/multiplication"
         android:textSize="@dimen/button_text"
@@ -219,12 +205,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_9" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_division"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="divisionButton"
         android:text="@string/division"
         android:textSize="@dimen/button_text"
@@ -232,12 +217,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/percentage" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/percentage"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="percentageButton"
         android:text="@string/percentage"
         android:textSize="@dimen/button_text"
@@ -245,12 +229,11 @@
         app:layout_constraintEnd_toStartOf="@+id/button_division"
         app:layout_constraintStart_toEndOf="@+id/clean" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/clean"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="cleanButton"
         android:text="@string/clean"
         android:textSize="@dimen/button_text"
@@ -258,12 +241,11 @@
         app:layout_constraintEnd_toStartOf="@+id/percentage"
         app:layout_constraintStart_toEndOf="@+id/all_clean" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/all_clean"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="80dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="allCleanButton"
         android:text="@string/all_clean"
         android:textSize="@dimen/button_text"
@@ -271,12 +253,11 @@
         app:layout_constraintEnd_toStartOf="@+id/clean"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_calculate"
-        style="@style/Theme.NewGBApplication"
         android:layout_width="180dp"
         android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/button_margin"
         android:onClick="calculateButton"
         android:text="@string/calculate"
         android:textSize="@dimen/button_text"
