@@ -1,5 +1,7 @@
 package com.example.newgbapplication;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.View;
@@ -12,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.mariuszgromada.math.mxparser.Expression;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Constants {
 
     private EditText input;
     private TextView resultPreview;
@@ -22,12 +24,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(codeStyleToStyleId(getCodeStyle()));
         setContentView(R.layout.activity_main);
 
         input = findViewById(R.id.inputView);
         resultPreview = findViewById(R.id.resultPreviewView);
 
         input.setShowSoftInputOnFocus(false);
+
+        findViewById(R.id.button_theme).setOnClickListener(v -> {
+            Intent runSettings = new Intent(this, ActivitySettings.class);
+            startActivity(runSettings);
+        });
     }
 
     @Override
@@ -119,8 +127,20 @@ public class MainActivity extends AppCompatActivity {
         Expression expression = new Expression(str);
         String result = String.valueOf(expression.calculate());
         if (result.equals("NaN")) {
-            result = "Некорректное выражение";
+            result = "Invalid expression";
         }
         return result;
+    }
+
+    private int getCodeStyle() {
+        SharedPreferences preferences = getSharedPreferences(NAME_SHARED_PREFERENCE, MODE_PRIVATE);
+        return preferences.getInt(appTheme, NewGBApplication);
+    }
+
+    private int codeStyleToStyleId(int codeStyle) {
+        if (codeStyle == NewGBApplicationDark) {
+            return R.style.Theme_NewGBApplicationDark;
+        }
+        return R.style.Theme_NewGBApplication;
     }
 }
