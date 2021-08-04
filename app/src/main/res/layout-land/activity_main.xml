@@ -126,7 +126,7 @@
         android:text="@string/point"
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_calculate"
+        app:layout_constraintEnd_toStartOf="@+id/button_theme"
         app:layout_constraintStart_toEndOf="@+id/button_0" />
 
     <com.google.android.material.button.MaterialButton
@@ -214,8 +214,19 @@
         app:layout_constraintStart_toEndOf="@+id/inputView" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_theme"
+        android:layout_width="80dp"
+        android:layout_height="55dp"
+        android:layout_margin="@dimen/button_margin"
+        android:text="@string/choose_theme"
+        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_calculate"
+        app:layout_constraintStart_toEndOf="@+id/button_point" />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_calculate"
-        android:layout_width="170dp"
+        android:layout_width="80dp"
         android:layout_height="55dp"
         android:layout_margin="@dimen/button_margin"
         android:onClick="calculateButton"
@@ -223,6 +234,6 @@
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_point" />
+        app:layout_constraintStart_toEndOf="@+id/button_theme" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,5 +19,9 @@
     <string name="clean">C</string>
     <string name="percentage">%</string>
     <string name="addition">+</string>
-    <string name="input">Введите выражение</string>
+    <string name="input">Enter expression</string>
+    <string name="light_theme">Light Theme</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="apply">Apply</string>
+    <string name="choose_theme">t</string>
 </resources>
